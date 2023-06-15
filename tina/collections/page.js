@@ -12,15 +12,27 @@ export default {
       required: true,
     },
     {
-      name: "body",
+      name: "rows",
       label: "Content Rows",
       type: "object",
       list: true,
+      ui: {
+        itemProps(item) {
+          return { label: item?.title || "Row" };
+        },
+      },
       fields: [
         {
+          type: "string",
+          label: "Title",
+          name: "title",
+          description:
+            "An optional title for this content-row, to make it easier to edit",
+        },
+        {
           type: "rich-text",
-          label: "Body",
-          name: "body",
+          label: "Block",
+          name: "block",
         },
       ],
     },

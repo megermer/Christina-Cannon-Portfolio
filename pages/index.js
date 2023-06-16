@@ -2,6 +2,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Layout } from "../components/Layout";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
+import Image from "next/image";
 import Head from "next/head";
 
 export default function Home(props) {
@@ -14,13 +15,20 @@ export default function Home(props) {
 
   // const content = data.page.body;
   return (
-    <Layout>
+    <div className="h-screen object-contain bg-black z-1">
+      <Image
+        src="/uploads/bridgePhoto.jpg"
+        layout="fill"
+        className="object-cover opacity-50 z-2" /* IMPORTANT - KEEPS IMAGE FROM WARPINGS*/
+      />
+      {/* Main content below! */}
       <Head>
         <title>{data.page.title}</title>
       </Head>
-      <main className="page-content">
+      {/* <div className="z-3 bg-red-600">Hello world</div> */}
+      <main className="page-content z-5 bg-blue-800 text-black">
         {(data?.page?.rows || []).map((row, i) => (
-          <article key={i}>
+          <article key={i} className="z-7">
             <TinaMarkdown content={row.block} />
           </article>
         ))}
@@ -31,7 +39,7 @@ export default function Home(props) {
       {/* <div data-tina-field={tinaField(data.page, "body")}>
         <TinaMarkdown content={content} />
       </div> */}
-    </Layout>
+    </div>
   );
 }
 

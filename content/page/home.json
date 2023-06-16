@@ -2,13 +2,12 @@
   "title": "Cool!",
   "rows": [
     {
-      "title": "Moon titlef",
-      "imgSrc": "/uploads/bridgePhoto.jpg",
-      "block": "Goodbye moon!\n"
+      "title": "Hello world",
+      "block": "# Hello world!\n"
     },
     {
-      "title": "World row",
-      "block": "Hello world!\n"
+      "title": "Goodbye moon",
+      "block": "# Goodbye moon!\n"
     }
   ]
 }

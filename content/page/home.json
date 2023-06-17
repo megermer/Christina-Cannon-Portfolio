@@ -1,13 +1,9 @@
 {
-  "title": "Cool!",
+  "title": "Entry Page",
   "rows": [
     {
       "title": "Hello world",
-      "block": "# Hello world!\n"
-    },
-    {
-      "title": "Goodbye moon",
-      "block": "# Goodbye moon!\n"
+      "block": "## hello world\n"
     }
   ]
 }

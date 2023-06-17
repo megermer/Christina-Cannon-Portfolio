@@ -2,7 +2,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import Link from "next/link";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 

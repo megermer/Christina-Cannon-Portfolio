@@ -3,7 +3,7 @@
   "rows": [
     {
       "title": "Hello world",
-      "block": "## hello world\n"
+      "block": "hello world\n"
     }
   ]
 }

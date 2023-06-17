@@ -25,9 +25,9 @@ export default function Home(props) {
         />
       </div>
       {(data?.page?.rows || []).map((row, i) => (
-        <div key={i} className="text-white text-center">
+        <article key={i} className="text-white text-center">
           <TinaMarkdown content={row.block} />
-        </div>
+        </article>
       ))}
     </main>
   );

@@ -4,7 +4,7 @@ import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
 import Image from "next/legacy/image";
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -15,7 +15,7 @@ export default function Home(props) {
   });
 
   return (
-    <main className="h-screen w-screen">
+    <main className="h-screen w-screen flex flex-col justify-center items-center">
       <div className="absolute -z-10 h-full w-full bg-black">
         <Image
           src="/uploads/bridgePhoto.jpg"
@@ -24,10 +24,13 @@ export default function Home(props) {
           className="opacity-50"
         />
       </div>
+      <div className="text-slate-200 text-5xl italic pt-5">
+        {data?.page?.title}
+      </div>
       {(data?.page?.rows || []).map((row, i) => (
-        <article key={i} className="text-white text-center">
+        <div key={i} className="text-slate-200 text-2xl pt-9">
           <TinaMarkdown content={row.block} />
-        </article>
+        </div>
       ))}
     </main>
   );

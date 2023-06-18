@@ -12,30 +12,42 @@ export default {
       required: true,
     },
     {
-      name: "rows",
-      label: "Content Rows",
-      type: "object",
-      list: true,
-      ui: {
-        itemProps(item) {
-          return { label: item?.title || "Row" };
-        },
-      },
-      fields: [
-        {
-          type: "string",
-          label: "Title",
-          name: "title",
-          description:
-            "An optional title for this content-row, to make it easier to edit",
-        },
-        {
-          type: "rich-text",
-          label: "Block",
-          name: "block",
-        },
-      ],
+      name: "subtitle",
+      label: "Subtitle",
+      type: "string",
+      required: true,
     },
+    {
+      name: "link",
+      labe: "Link",
+      type: "string",
+      required: true,
+    },
+    // {
+    //   name: "rows",
+    //   label: "Content Rows",
+    //   type: "object",
+    //   list: true,
+    //   ui: {
+    //     itemProps(item) {
+    //       return { label: item?.title || "Row" };
+    //     },
+    //   },
+    //   fields: [
+    //     {
+    //       type: "string",
+    //       label: "Title",
+    //       name: "title",
+    //       description:
+    //         "An optional title for this content-row, to make it easier to edit",
+    //     },
+    //     {
+    //       type: "rich-text",
+    //       label: "Block",
+    //       name: "block",
+    //     },
+    //   ],
+    // },
   ],
   ui: {
     router: ({ document }) => {

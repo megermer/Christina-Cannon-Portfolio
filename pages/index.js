@@ -15,7 +15,7 @@ export default function Home(props) {
   });
 
   return (
-    <main className="h-screen w-screen flex flex-col justify-center items-center">
+    <main className="h-screen w-screen flex flex-col justify-center items-center text-slate-300">
       <div className="absolute -z-10 h-full w-full bg-black">
         <Image
           src="/uploads/bridgePhoto.jpg"
@@ -24,14 +24,18 @@ export default function Home(props) {
           className="opacity-50"
         />
       </div>
-      <div className="text-slate-200 text-5xl italic pt-5">
-        {data?.page?.title}
+      <div className="text-5xl italic pt-5">{data?.page?.title}</div>
+      <div className="text-xl pt-9">{data?.page?.subtitle}</div>
+      <div className="absolute bottom-20 italic">
+        <Link href="/posts">
+          <p className="hover:underline">{data?.page?.link}</p>
+        </Link>
       </div>
-      {(data?.page?.rows || []).map((row, i) => (
+      {/* {(data?.page?.rows || []).map((row, i) => (
         <div key={i} className="text-slate-200 text-2xl pt-9">
           <TinaMarkdown content={row.block} />
         </div>
-      ))}
+      ))} */}
     </main>
   );
 }

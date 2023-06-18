@@ -1,9 +1,5 @@
 {
   "title": "art. writing. research.",
-  "rows": [
-    {
-      "title": "Hello world",
-      "block": "at the intersection of the sciences and humanties.\n"
-    }
-  ]
+  "subtitle": "at the intersection of the sciences and humanties.",
+  "link": "view my portfolio"
 }

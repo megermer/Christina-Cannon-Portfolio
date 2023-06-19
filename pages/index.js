@@ -26,7 +26,7 @@ export default function Home(props) {
       </div>
       <div className="text-5xl italic pt-5">{data?.page?.title}</div>
       <div className="text-xl pt-9">{data?.page?.subtitle}</div>
-      <div className="absolute bottom-20 italic">
+      <div className="absolute bottom-20">
         <Link href="/posts">
           <p className="hover:underline">{data?.page?.link}</p>
         </Link>

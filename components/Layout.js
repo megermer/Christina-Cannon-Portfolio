@@ -18,12 +18,24 @@ export const Layout = (props) => {
           alt="red ferns"
         />
         <div className="w-screen flex flex-row gap-20 justify-center mt-3">
-          <Link href="">about</Link>
-          <Link href="">art</Link>
-          <Link href="">writing</Link>
-          <Link href="">research</Link>
-          <Link href="">blog</Link>
-          <Link href="">contact</Link>
+          <Link href="" className="hover:text-red-700">
+            about
+          </Link>
+          <Link href="" className="hover:text-red-700">
+            art
+          </Link>
+          <Link href="" className="hover:text-red-700">
+            writing
+          </Link>
+          <Link href="" className="hover:text-red-700">
+            research
+          </Link>
+          <Link href="/posts" className="hover:text-red-700">
+            blog
+          </Link>
+          <Link href="" className="hover:text-red-700">
+            contact
+          </Link>
         </div>
         {/* <Link href="/">Home</Link>
         {" | "}
